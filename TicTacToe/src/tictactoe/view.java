@@ -20,6 +20,8 @@ public class view {
     private JButton[][] grid;
     private JButton reset;
     private JLabel l1;
+    private JTextField a1;
+   
 
     public view() {
     		this.gui = new JFrame("Tic Tac Toe");
@@ -27,7 +29,8 @@ public class view {
     		this.reset = new JButton("Press to Reset");
                 this.reset.setBackground(Color.lightGray);
                 this.l1 = new JLabel("'X' for Player 1 & 'O' for Player 2");
-               
+                this.a1= new JTextField("Fatima Naseer here!");
+                
                 gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 gui.setSize(new Dimension(600, 450));
                 gui.setResizable(true);
@@ -41,7 +44,10 @@ public class view {
                 JPanel messages = new JPanel(new FlowLayout());
                 l1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(79, 0, 0)));
                 messages.add(this.l1);
-
+                
+                a1.setEditable(false);
+                a1.setBackground(Color.lightGray);
+                gui.add(this.a1, BorderLayout.EAST);
                 gui.add(gamePanel, BorderLayout.NORTH);
                 gui.add(options, BorderLayout.CENTER);
                 gui.add(messages, BorderLayout.PAGE_END);
